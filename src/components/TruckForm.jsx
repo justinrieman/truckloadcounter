@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function TruckForm(props) {
 
     const [truck, setTruck] = useState({
@@ -7,6 +8,9 @@ function TruckForm(props) {
         color: '',
         license: ''
     });
+
+   
+
 
     function handleInput(event) {
         
@@ -30,9 +34,17 @@ function TruckForm(props) {
             color: '',
             license: ''
         })
+
+        props.shrink();
+    }
+
+    function handleShrink(event) {
+        event.preventDefault();
+        props.shrink();
     }
 
     return (
+        
         <div>
             <form className="truck-form">
                 <input 
@@ -56,10 +68,12 @@ function TruckForm(props) {
                     autoComplete="off"
                     value={truck.license}
                 />
-                <button className="form-close">Close</button>
+                <button onClick={handleShrink} className="form-close">Close</button>
                 <button onClick={submitTruck} className="form-add">Add</button>
             </form>
+           
         </div>
+        
     )
 }
 
