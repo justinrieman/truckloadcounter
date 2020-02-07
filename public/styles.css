@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    height: 150%;
+    
+}
+
+button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 500px;
+}
+
+.header button {
+    margin: 20px;
+}
+
+.header .btn-stats {
+    margin-left: 0;
+}
+
+.header .btn-truck {
+    float: right;
+}
+
+.truck {
+    margin: 15px;
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    padding: 10px;
+    width: 100%;
+    float: left;
+    -webkit-box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
+    -moz-box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
+    box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
+}
+
+.truck h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.truck .description div {
+    display: inline-block;
+    line-height: 1.3rem;
+}
+
+
+.truck .description .license {
+    margin-left: 55px;
+}
+
+.truck-info, .counter {
+    display: inline-block;  
+}
+
+.counter {
+    float: right;
+    margin-top: 5px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 12px;;
+    height: 80px;
+    border-left: 1px solid whitesmoke;
+}
+
+.counter h1 {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.truck-form {
+    width: 50%;
+    margin: 15px auto;
+}
+
+.truck-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    color: whitesmoke;
+    background: none;
+    border: none;
+    outline-color: whitesmoke;
+    outline-style: hidden;
+    border-bottom: 2px solid whitesmoke;
+    font-size: 15px;
+}
+
+.truck-form input::placeholder {
+    color: rgba(245, 245, 245, 0.488);
+}
+
+.truck-form h3 {
+    text-align: center;
+}
+
+.truck-form button {
+    font-size: 15px;
+    margin-top: 25px;
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.truck-form .form-add {
+    float: right;
+}
