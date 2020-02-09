@@ -12,11 +12,13 @@ function Truck(props) {
         const fullHour = date.getHours();
         const minutes = date.getMinutes();
         const seconds = date.getSeconds();
+        const unixSeconds = date.getTime() / 1000;
         const amPM = fullHour >= 12 ? 'PM' : 'AM'
         const hour = fullHour > 12 ? (fullHour - 12) : fullHour
 
         const time = {
             date: fullDate,
+            unixSeconds: unixSeconds,
             hour: hour,
             minutes: minutes,
             seconds: seconds,

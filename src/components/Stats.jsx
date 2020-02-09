@@ -8,13 +8,41 @@ function Stats(props) {
 
     const allTrucks = props.truckList;
     const [selectedTruck, setSelectedTruck] = useState(null);
-    const [truckTimes, setTruckTimes] = useState();
+    const [avgTime, setAvgTime] = useState();
     const [loadTimes, setLoadTimes] = useState([]);
+
+    
 
 
     function selectTruck(id) {
         setSelectedTruck(id);
-        setTruckTimes(allTrucks[id].times)
+        const allUnixTimes = allTrucks[id].times.map(time => time.unixSeconds)
+        const timesBetweenLoads = []
+
+        
+
+        if (allUnixTimes.length <= 1) {
+            setAvgTime('---')
+        } else {
+            // Calculate average time between each load
+            for (let i = 1; i < allUnixTimes.length; i++) {
+                timesBetweenLoads.push(allUnixTimes[i] - allUnixTimes[i - 1])
+            }
+
+            //In Seconds
+            const averageTimeBetweenLoads = 
+                Math.round((timesBetweenLoads.reduce((a, b) => a + b)) / timesBetweenLoads.length)
+
+            //Convert to hh:mm:ss format
+
+            
+
+            setAvgTime(secondsToHms(averageTimeBetweenLoads))
+        }
+
+        
+
+
         setLoadTimes(allTrucks[id].times.map(time => 
             time.hour + ':' + (time.minutes<10 ? '0': '') + time.minutes + ' ' + time.amPM
             ))
@@ -51,6 +79,7 @@ function Stats(props) {
                             title={truck.title}
                             allTrucks={allTrucks}
                             loadTimes={loadTimes}
+                            avgTime={avgTime}
                             show={selectedTruck === index ? true : false}
                         />
                         </Collapse>
@@ -60,6 +89,18 @@ function Stats(props) {
             
         </div>
     )
+}
+
+function secondsToHms(d) {
+    d = Number(d);
+    const h = Math.floor(d / 3600);
+    const m = Math.floor(d % 3600 / 60);
+    const s = Math.floor(d % 3600 % 60);
+
+    const hDisplay = h > 0 ? h + ':' : '';
+    const mDisplay = m > 0 ? (m < 10 && h > 0 ? '0' : '') + m + ':' : '0:';
+    const sDisplay = s > 0 ? (s < 10 ? '0' : '') + s : '00';
+    return hDisplay + mDisplay + sDisplay; 
 }
 
 export default Stats;

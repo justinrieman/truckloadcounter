@@ -17,10 +17,10 @@ function TruckStats (props) {
             <h2>{props.title}</h2>
             <br/>
             <h3>Avg Time Between Loads</h3>
-            <p>49:17</p>
+            <p>{props.avgTime}</p>
             <br/>
             <h3>Load Times</h3>
-            {props.loadTimes.map((time, index) => {
+            {props.loadTimes.reverse().map((time, index) => {
                 return (
                     <LoadTime 
                     key={index}
