@@ -4,6 +4,7 @@ import Truck from './Truck';
 import TruckForm from './TruckForm';
 import Collapse from "@material-ui/core/Collapse";
 
+
 function App () {
 
     // Adding a Truck
@@ -35,7 +36,9 @@ function App () {
 
     function increaseCount() {
         setTotalCount(totalCount + 1)
+        
     }
+
 
     return(
         
@@ -43,6 +46,7 @@ function App () {
             
             <Header 
                 expand={expand}
+                truckList={truckList}
             />
             <Collapse in={isExpanded}> 
                 <div>
@@ -52,7 +56,10 @@ function App () {
                     />
                 </div>
             </Collapse>
-           <h2 className="no-trucks">{truckList.length === 0 ? "No trucks have been added yet." : null}</h2>
+
+            <h2 className="no-trucks">{truckList.length === 0 ? "No trucks have been added yet." : null}</h2>
+
+
             {truckList.map((truck, index) => {
                 return(
                     <Truck 
@@ -62,11 +69,21 @@ function App () {
                     color={truck.color}
                     license={truck.license}
                     increaseCount={increaseCount}
+                    times={truck.times}
                     />
                 )
             })}
 
-        <h2 className="total-count">Total Count: {totalCount}</h2>
+            <h2 className="total-count">{truckList.length > 0 && 'Total Count: ' + totalCount}</h2>
+
+            
+                
+            
+            
+            
+
+        
+            
         </div>
        
     )

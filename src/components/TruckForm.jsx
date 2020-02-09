@@ -6,7 +6,8 @@ function TruckForm(props) {
     const [truck, setTruck] = useState({
         title: '',
         color: '',
-        license: ''
+        license: '',
+        times: []
     });
 
    
@@ -32,7 +33,8 @@ function TruckForm(props) {
         setTruck({
             title: '',
             color: '',
-            license: ''
+            license: '',
+            times: []
         })
 
         props.shrink();

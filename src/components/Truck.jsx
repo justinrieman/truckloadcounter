@@ -7,8 +7,27 @@ function Truck(props) {
     const [truckCounter, setTruckCounter] = useState(0)
 
     function increase() {
+        const date = new Date();
+        const fullDate = date.toLocaleDateString();
+        const fullHour = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        const amPM = fullHour >= 12 ? 'PM' : 'AM'
+        const hour = fullHour > 12 ? (fullHour - 12) : fullHour
+
+        const time = {
+            date: fullDate,
+            hour: hour,
+            minutes: minutes,
+            seconds: seconds,
+            amPM: amPM
+        }
+
+        
         setTruckCounter(truckCounter + 1);
         props.increaseCount();
+        
+        props.times.push(time);
     }
 
     return(
