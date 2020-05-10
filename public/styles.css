@@ -183,7 +183,7 @@ button {
 .stat-info {
   text-align: center;
   margin-top: 40px;
-  max-height: 460px;
+  max-height: 350px;
   overflow: scroll;
 }
 
