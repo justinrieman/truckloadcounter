@@ -1,190 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    height: 150%;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  background: #f85032; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #e73827,
+    #f85032,
+    #e73827
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e73827,
+    #f85032,
+    #e73827
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  height: 150%;
 }
 
 button {
-    outline: none;
-    border: none;
-    font-size: 20px;
-    color: whitesmoke;
-    background-color: rgba(255, 255, 255, 0);
-    cursor: pointer;
-    text-shadow: 2px 2px rgba(48, 48, 48, 0.303);
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  text-shadow: 2px 2px rgba(48, 48, 48, 0.303);
 }
 
-
-
 .container {
-    position: relative;
-    margin: auto;
-    width: 375px;
+  position: relative;
+  margin: auto;
+  width: 375px;
 }
 
 .header button {
-    margin: 20px;
+  margin: 20px;
 }
 
 .header .btn-truck {
-    float: right;
+  float: right;
 }
 
 .no-trucks {
-    margin-top: 50px;
-    font-size: 20px;
-    color: rgba(245, 245, 245, 0.557);
-    text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: rgba(245, 245, 245, 0.557);
+  text-align: center;
 }
 
 .truck {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid whitesmoke;
-    border-radius: 7px;
-    padding: 10px;
-    width: 95%;
-    -webkit-box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
-    -moz-box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
-    box-shadow: 10px 10px 30px -4px rgba(48,48,48,0.75);
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid whitesmoke;
+  border-radius: 7px;
+  padding: 10px;
+  width: 95%;
+  -webkit-box-shadow: 10px 10px 30px -4px rgba(48, 48, 48, 0.75);
+  -moz-box-shadow: 10px 10px 30px -4px rgba(48, 48, 48, 0.75);
+  box-shadow: 10px 10px 30px -4px rgba(48, 48, 48, 0.75);
 }
 
 .truck h1 {
-    margin-bottom: 10px;
-    font-size: 30px;
+  margin-bottom: 10px;
+  font-size: 30px;
 }
 
 .truck .description div {
-    display: inline-block;
-    line-height: 1.3rem;
+  display: inline-block;
+  line-height: 1.3rem;
 }
-
 
 .truck .description .license {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
-
-
-.truck-info, .counter {
-    display: inline-block;  
+.truck-info,
+.counter {
+  display: inline-block;
 }
 
 .truck-info {
-    width: 73%;
-    border-right: 1px solid whitesmoke;
-    padding-right: 30px;
+  width: 73%;
+  border-right: 1px solid whitesmoke;
+  padding-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 .counter {
-    float: right;
-    width: 25%;
+  float: right;
+  width: 25%;
 }
 
-
 .counter h1 {
-    margin-top: 18px;
-    text-align: center;
-    font-size: 40px;
-    cursor: pointer;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 .truck-form {
-    width: 50%;
-    margin: 15px auto;
+  width: 50%;
+  margin: 15px auto;
 }
 
 .truck-form input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    color: whitesmoke;
-    background: none;
-    border: none;
-    outline-color: whitesmoke;
-    outline-style: hidden;
-    border-bottom: 2px solid whitesmoke;
-    font-size: 15px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline-color: whitesmoke;
+  outline-style: hidden;
+  border-bottom: 2px solid whitesmoke;
+  font-size: 15px;
 }
 
 .truck-form input::placeholder {
-    color: rgba(245, 245, 245, 0.488);
+  color: rgba(245, 245, 245, 0.488);
 }
 
 .truck-form h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .truck-form button {
-    font-size: 15px;
-    margin-top: 25px;
-    border: 2px solid whitesmoke;
-    border-radius: 7px;
-    padding: 10px;
-    text-shadow: none;
+  font-size: 15px;
+  margin-top: 25px;
+  border: 2px solid whitesmoke;
+  border-radius: 7px;
+  padding: 10px;
+  text-shadow: none;
 }
 
 .truck-form .form-add {
-    float: right;
+  float: right;
 }
 
 .total-count {
-    text-align: center;
-    margin-top: 45px;
-    text-shadow: 2px 2px rgba(48, 48, 48, 0.303);
+  text-align: center;
+  margin: 45px;
+  text-shadow: 2px 2px rgba(48, 48, 48, 0.303);
 }
 
 .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .stats {
-    position: absolute;
-    top: 70px;
-    width: 300px;
+  position: absolute;
+  top: 70px;
+  width: 300px;
 }
 
 .stat-bar {
-    overflow: auto;
-    white-space: nowrap;
-    text-align: center;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .stat-bar button {
-    padding: 20px;
-    display: inline;
+  padding: 20px;
+  display: inline;
 }
 
 .stat-bar button:hover {
-    background-color: #777;
+  background-color: #777;
 }
 
 .stat-info {
-    text-align: center;
-    margin-top: 40px;
-    max-height: 475px;
-    overflow: scroll;
+  text-align: center;
+  margin-top: 40px;
+  max-height: 460px;
+  overflow: scroll;
 }
 
 .stat-info h3 {
-    text-decoration: underline;
-    margin-bottom: 5px;
+  text-decoration: underline;
+  margin-bottom: 5px;
 }
 
 .stat-info p {
-    padding: 5px;
+  padding: 5px;
 }
